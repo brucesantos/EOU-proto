@@ -1,0 +1,1735 @@
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/master.css">
+    <title>EOU</title>
+    <!-- scripts dos gráficos -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.16.3"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                Exame de ordem em números
+            </div>
+            <ul class="nav">
+                <li><a href="" class="active">Comparativo</a></li>
+                <li class="dropdown-container">
+                    <a class="dropdown-toggle">
+                        Exames
+                        <img src="images/icons/angle-down.svg" alt="icone que aponta para baixo em forma de seta">
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="#" value="40">40º (2023)</a>
+                        <a href="#" value="39">39º (2023)</a>
+                        <a href="#" value="38">XXXVIII (2023)</a>
+                        <a href="#" value="37">XXXVII (2022)</a>
+                        <a href="#" value="36">XXXVI (2022)</a>
+                        <a href="#" value="35">XXXV (2022)</a>
+                    </div>
+                </li>
+                <li><a href="">Sobre</a></li>
+            </ul>
+        </header>
+        <main>
+            <div class="content">
+                <section id="intro" class="text-max-width-container">
+                    <p id="last-update">
+                        Última atualização em 15/06/2023
+                    </p>
+                    <h1>
+                        A evolução do Exame de Ordem ao longo do tempo
+                    </h1>
+                    <p class="text-lg">
+                        Explorando a trajetória do Exame de Ordem, este relatório oferece uma análise detalhada das inscrições, aprovações e perfis dos candidatos.
+                    </p>
+                </section>
+                <section id="inscricoes" class="text-max-width-container">
+                    <h2>
+                        Inscrições
+                    </h2>
+                    <p>
+                        A seção de inscrições apresenta um panorama das tendências de participação no Exame de Ordem. Observamos a estabilidade na quantidade de inscritos, refletindo o contínuo interesse na advocacia como carreira profissional.
+                    </p>
+                </section>
+                <section id="inscricoes-absoluto-genero">
+                    <div class="card-chart">
+                        <div class="chart">
+                            <!DOCTYPE html>
+                            <html>
+                            <head>
+                              
+                            </head>
+                            <body>
+                              <div id="vis"></div>
+                              <script>
+                                (function(vegaEmbed) {
+                                  var spec = {
+                                    "config": {
+                                      "view": {
+                                        "continuousWidth": 300,
+                                        "continuousHeight": 300,
+                                        "stroke": null
+                                      }
+                                    },
+                                    "data": {
+                                      "name": "data-ed7b8427e9e4185799c851f3862bc4ac"
+                                    },
+                                    "mark": {
+                                      "type": "line",
+                                      "point": true
+                                    },
+                                    "encoding": {
+                                      "color": {
+                                        "field": "Metric",
+                                        "legend": {
+                                          "symbolType": "square",
+                                          "title": "Taxa de Participação"
+                                        },
+                                        "scale": {
+                                          "range": ["#4169E1", "#6495ED", "#87CEEB", "#87CEFA", "#ADD8E6", "#B0C4DE", "#B0E0E6", "#00CED1", "#00FFFF", "#F0F8FF"]
+                                        },
+                                        "type": "nominal"
+                                      },
+                                      "tooltip": [
+                                        {
+                                          "field": "Edição",
+                                          "type": "nominal"
+                                        },
+                                        {
+                                          "field": "Value",
+                                          "title": "Taxa de Participação (#)",
+                                          "type": "quantitative"
+                                        }
+                                      ],
+                                      "x": {
+                                        "axis": {
+                                          "grid": false,
+                                          "labelColor": "#888888",
+                                          "titleAnchor": "start",
+                                          "titleColor": "#888888"
+                                        },
+                                        "field": "Edição",
+                                        "type": "nominal"
+                                      },
+                                      "y": {
+                                        "axis": {
+                                          "grid": false,
+                                          "labelColor": "#888888",
+                                          "titleAnchor": "end",
+                                          "titleColor": "#888888"
+                                        },
+                                        "field": "Value",
+                                        "title": "Taxa de Participação (#)",
+                                        "type": "quantitative"
+                                      }
+                                    },
+                                    // "height": 200,
+                                    "width": 400,
+                                    "$schema": "https://vega.github.io/schema/vega-lite/v5.16.3.json",
+                                    "datasets": {
+                                      "data-ed7b8427e9e4185799c851f3862bc4ac": [
+                                        { "Edição": "XXX", "Metric": "Feminino", "Value": 80206 },
+                                        { "Edição": "XXXI", "Metric": "Feminino", "Value": 86325 },
+                                        { "Edição": "XXXII", "Metric": "Feminino", "Value": 151981 },
+                                        { "Edição": "XXXIII", "Metric": "Feminino", "Value": 103435 },
+                                        { "Edição": "XXXIV", "Metric": "Feminino", "Value": 88237 },
+                                        { "Edição": "XXXV", "Metric": "Feminino", "Value": 94013 },
+                                        { "Edição": "XXXVI", "Metric": "Feminino", "Value": 86651 },
+                                        { "Edição": "XXXVII", "Metric": "Feminino", "Value": 105963 },
+                                        { "Edição": "XXXVIII", "Metric": "Feminino", "Value": 85729 },
+                                        { "Edição": "XXX", "Metric": "Masculino", "Value": 57022 },
+                                        { "Edição": "XXXI", "Metric": "Masculino", "Value": 64404 },
+                                        { "Edição": "XXXII", "Metric": "Masculino", "Value": 109252 },
+                                        { "Edição": "XXXIII", "Metric": "Masculino", "Value": 71648 },
+                                        { "Edição": "XXXIV", "Metric": "Masculino", "Value": 62884 },
+                                        { "Edição": "XXXV", "Metric": "Masculino", "Value": 66099 },
+                                        { "Edição": "XXXVI", "Metric": "Masculino", "Value": 59196 },
+                                        { "Edição": "XXXVII", "Metric": "Masculino", "Value": 70664 },
+                                        { "Edição": "XXXVIII", "Metric": "Masculino", "Value": 60486 }
+                                      ]
+                                    }
+                                  };
+                                  var embedOpt = {"actions": false, "mode": "vega-lite"};
+                            
+                                  function showError(el, error){
+                                      el.innerHTML = ('<div style="color:red;">'
+                                                      + '<p>JavaScript Error: ' + error.message + '</p>'
+                                                      + "<p>This usually means there's a typo in your chart specification. "
+                                                      + "See the javascript console for the full traceback.</p>"
+                                                      + '</div>');
+                                      throw error;
+                                  }
+                                  const el = document.getElementById('vis');
+                                  vegaEmbed("#vis", spec, embedOpt)
+                                    .catch(error => showError(el, error));
+                                })(vegaEmbed);
+                            
+                              </script>
+                            </body>
+                            </html>
+                        </div>
+                        <div class="description">
+                            <h3>
+                                Inscritos por Gênero
+                            </h3>
+                            <p>
+                                As mulheres consistentemente superam os homens em termos de participação no Exame de Ordem, uma tendência que se mantém ao longo dos anos com uma diferença relativamente constante entre os números de inscrições de ambos os gêneros. A linha do gráfico referente às mulheres mostra não apenas uma maior taxa de inscrição inicial, mas também uma liderança contínua ao longo das edições do exame. A estabilidade nas inscrições femininas é marcante, exceto por um pico notável em 2021, que pode ser atribuído à prorrogação excepcional do exame devido à pandemia da COVID-19.
+                            </p>
+                            <p>
+                                Similarmente, a participação masculina, embora mais baixa, segue um padrão parecido com o das mulheres, indicando uma tendência estável com um aumento significativo também no ano de 2021. Este pico temporário reflete o impacto da prorrogação do exame para ambos os gêneros, sugerindo que as circunstâncias da pandemia influenciaram de maneira similar a decisão de homens e mulheres em participar do exame naquele ano.
+                            </p>
+                            <p>
+                                A persistência da maior participação feminina ao longo do tempo destaca um interesse ou necessidade contínua das mulheres em realizar o Exame de Ordem. A proporção entre as inscrições de mulheres e homens, apesar de variações anuais, permaneceu relativamente estável, indicando que não houve mudanças drásticas na dinâmica de gênero dos participantes do exame ao longo dos anos observados.
+                            </p>
+                            <div class="expand-toggle">Detalhes</div>
+                        </div>
+                        <div class="actions">
+                            <a href="">
+                                <img src="images/icons/share.svg" alt="ícone de compartilhar">
+                            </a>                                
+                            <a href="">
+                                <img src="images/icons/download.svg" alt="ícone de download">
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <section id="inscricoes-percent-genero">
+                    <div class="card-chart">
+                        <div class="chart">
+                            <!DOCTYPE html>
+                            <html>
+                            <head>
+                            </head>
+                            <body>
+                              <div id="vis2"></div>
+                              <script>
+                                (function(vegaEmbed) {
+                                  var spec = {
+                                    "config": {
+                                      "view": {
+                                        "continuousWidth": 300,
+                                        "continuousHeight": 300,
+                                        "stroke": null
+                                      }
+                                    },
+                                    "data": {
+                                      "name": "data-d51727c020ac31a0e6d58746b4356981"
+                                    },
+                                    "mark": {
+                                      "type": "line",
+                                      "point": true
+                                    },
+                                    "encoding": {
+                                      "color": {
+                                        "field": "Metric",
+                                        "legend": {
+                                          "orient": "bottom",
+                                          "symbolType": "square",
+                                          "title": "Taxa de Participação"
+                                        },
+                                        "scale": {
+                                          "range": [
+                                            "#4169E1",
+                                            "#6495ED",
+                                            "#87CEEB",
+                                            "#87CEFA",
+                                            "#ADD8E6",
+                                            "#B0C4DE",
+                                            "#B0E0E6",
+                                            "#00CED1",
+                                            "#00FFFF",
+                                            "#F0F8FF"
+                                          ]
+                                        },
+                                        "type": "nominal"
+                                      },
+                                      "tooltip": [
+                                        {
+                                          "field": "Edição",
+                                          "type": "nominal"
+                                        },
+                                        {
+                                          "field": "Value",
+                                          "format": ".02f",
+                                          "title": "Taxa de Participação (%)",
+                                          "type": "quantitative"
+                                        }
+                                      ],
+                                      "x": {
+                                        "axis": {
+                                          "grid": false,
+                                          "labelColor": "#888888",
+                                          "titleAnchor": "start",
+                                          "titleColor": "#888888"
+                                        },
+                                        "field": "Edição",
+                                        "type": "nominal"
+                                      },
+                                      "y": {
+                                        "axis": {
+                                          "grid": false,
+                                          "labelColor": "#888888",
+                                          "titleAnchor": "end",
+                                          "titleColor": "#888888"
+                                        },
+                                        "field": "Value",
+                                        "scale": {
+                                          "domain": [0, 80]
+                                        },
+                                        "title": "Taxa de Participação (%)",
+                                        "type": "quantitative"
+                                      }
+                                    },
+                                    // "height": 200,
+                                    // "title": {
+                                    //   "text": "Participação de Gênero por Edição (%)",
+                                    //   "anchor": "start",
+                                    //   "font": "Arial",
+                                    //   "fontSize": 16,
+                                    //   "fontWeight": "normal",
+                                    //   "offset": 10
+                                    // },
+                                    "width": 430,
+                                    "$schema": "https://vega.github.io/schema/vega-lite/v5.16.3.json",
+                                    "datasets": {
+                                      "data-d51727c020ac31a0e6d58746b4356981": [
+                                        {
+                                          "Edição": "XXX",
+                                          "Metric": "Taxa part. mulheres",
+                                          "Value": 58.447255662109775
+                                        },
+                                        {
+                                          "Edição": "XXXI",
+                                          "Metric": "Taxa part. mulheres",
+                                          "Value": 57.27165973369425
+                                        },
+                                        {
+                                          "Edição": "XXXII",
+                                          "Metric": "Taxa part. mulheres",
+                                          "Value": 58.17833122155317
+                                        },
+                                        {
+                                          "Edição": "XXXIII",
+                                          "Metric": "Taxa part. mulheres",
+                                          "Value": 59.07769457914246
+                                        },
+                                        {
+                                          "Edição": "XXXIV",
+                                          "Metric": "Taxa part. mulheres",
+                                          "Value": 58.3883113531541
+                                        },
+                                        {
+                                          "Edição": "XXXV",
+                                          "Metric": "Taxa part. mulheres",
+                                          "Value": 58.71702308384131
+                                        },
+                                        {
+                                          "Edição": "XXXVI",
+                                          "Metric": "Taxa part. mulheres",
+                                          "Value": 59.412260793845604
+                                        },
+                                        {
+                                          "Edição": "XXXVII",
+                                          "Metric": "Taxa part. mulheres",
+                                          "Value": 59.99252662390234
+                                        },
+                                        {
+                                          "Edição": "XXXVIII",
+                                          "Metric": "Taxa part. mulheres",
+                                          "Value": 58.63215128406798
+                                        },
+                                        {
+                                          "Edição": "XXX",
+                                          "Metric": "Taxa part. homens",
+                                          "Value": 41.552744337890225
+                                        },
+                                        {
+                                          "Edição": "XXXI",
+                                          "Metric": "Taxa part. homens",
+                                          "Value": 42.72834026630575
+                                        },
+                                        {
+                                          "Edição": "XXXII",
+                                          "Metric": "Taxa part. homens",
+                                          "Value": 41.82166877844683
+                                        },
+                                        {
+                                          "Edição": "XXXIII",
+                                          "Metric": "Taxa part. homens",
+                                          "Value": 40.92230542085753
+                                        },
+                                        {
+                                          "Edição": "XXXIV",
+                                          "Metric": "Taxa part. homens",
+                                          "Value": 41.611688646845906
+                                        },
+                                        {
+                                          "Edição": "XXXV",
+                                          "Metric": "Taxa part. homens",
+                                          "Value": 41.28297691615869
+                                        },
+                                        {
+                                          "Edição": "XXXVI",
+                                          "Metric": "Taxa part. homens",
+                                          "Value": 40.587739206154396
+                                        },
+                                        {
+                                          "Edição": "XXXVII",
+                                          "Metric": "Taxa part. homens",
+                                          "Value": 40.00747337609765
+                                        },
+                                        {
+                                          "Edição": "XXXVIII",
+                                          "Metric": "Taxa part. homens",
+                                          "Value": 41.36784871593201
+                                        }
+                                      ]
+                                    }
+                                  };
+                                  var embedOpt = {"actions": false, "mode": "vega-lite"};
+                            
+                                  function showError(el, error){
+                                      el.innerHTML = ('<div style="color:red;">'
+                                                      + '<p>JavaScript Error: ' + error.message + '</p>'
+                                                      + "<p>This usually means there's a typo in your chart specification. "
+                                                      + "See the javascript console for the full traceback.</p>"
+                                                      + '</div>');
+                                      throw error;
+                                  }
+                                  const el = document.getElementById('vis2');
+                                  vegaEmbed("#vis2", spec, embedOpt)
+                                    .catch(error => showError(el, error));
+                                })(vegaEmbed);
+                            
+                              </script>
+                            </body>
+                            </html>
+                        </div>
+                        <div class="description">
+                            <h3>
+                                Inscritos por Gênero (percentual)
+                            </h3>
+                            <p>
+                                Them lion better through are house. Would love remember fell motorcycle. Toad-like fritters potion that twin hedwig tears. Through glory mistletoe lived captivity for aragog mewing.
+                            </p>
+                        </div>
+                        <div class="actions">
+                            <a href="">
+                                <img src="images/icons/share.svg" alt="ícone de compartilhar">
+                            </a>                                
+                            <a href="">
+                                <img src="images/icons/download.svg" alt="ícone de download">
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <section id="inscricoes-percent-cor">
+                    <div class="card-chart">
+                        <div class="chart">
+                            <!DOCTYPE html>
+                            <html>
+                            <head>
+                            </head>
+                            <body>
+                              <div id="vis3"></div>
+                              <script>
+                                (function(vegaEmbed) {
+                                  var spec = {
+                                    "config": {
+                                      "view": {
+                                        "continuousWidth": 300,
+                                        "continuousHeight": 300,
+                                        "stroke": null
+                                      }
+                                    },
+                                    "data": {
+                                      "name": "data-7f9ec1bf3e68e1101f40bba44fb8e5e5"
+                                    },
+                                    "mark": {
+                                      "type": "line",
+                                      "point": true
+                                    },
+                                    "encoding": {
+                                      "color": {
+                                        "field": "Metric",
+                                        "legend": {
+                                          "symbolType": "square"
+                                        },
+                                        "scale": {
+                                          "range": [
+                                            "#4169E1",
+                                            "#6495ED",
+                                            "#87CEEB",
+                                            "#87CEFA",
+                                            "#ADD8E6",
+                                            "#B0C4DE",
+                                            "#B0E0E6",
+                                            "#00CED1",
+                                            "#00FFFF",
+                                            "#F0F8FF"
+                                          ]
+                                        },
+                                        "title": "Etnia",
+                                        "type": "nominal"
+                                      },
+                                      "tooltip": [
+                                        {
+                                          "field": "Edição",
+                                          "type": "nominal"
+                                        },
+                                        {
+                                          "field": "Metric",
+                                          "title": "Etnia",
+                                          "type": "nominal"
+                                        },
+                                        {
+                                          "field": "Value",
+                                          "format": ".02f",
+                                          "title": "Taxa de Aprovação (%)",
+                                          "type": "quantitative"
+                                        }
+                                      ],
+                                      "x": {
+                                        "axis": {
+                                          "grid": false,
+                                          "labelColor": "#888888",
+                                          "titleAnchor": "start",
+                                          "titleColor": "#888888"
+                                        },
+                                        "field": "Edição",
+                                        "type": "nominal"
+                                      },
+                                      "y": {
+                                        "axis": {
+                                          "grid": false,
+                                          "labelColor": "#888888",
+                                          "titleAnchor": "end",
+                                          "titleColor": "#888888"
+                                        },
+                                        "field": "Value",
+                                        "title": "Taxa de Aprovação (%)",
+                                        "type": "quantitative"
+                                      }
+                                    },
+                                    // "height": 200,
+                                    "params": [
+                                      {
+                                        "name": "param_11",
+                                        "select": {
+                                          "type": "interval",
+                                          "encodings": [
+                                            "x",
+                                            "y"
+                                          ]
+                                        },
+                                        "bind": "scales"
+                                      }
+                                    ],
+                                    // "title": {
+                                    //   "text": "Participação (Número de Inscritos) de Cada Etnia",
+                                    //   "anchor": "start",
+                                    //   "font": "Arial",
+                                    //   "fontSize": 16,
+                                    //   "fontWeight": "normal",
+                                    //   "offset": 10
+                                    // },
+                                    "width": 440,
+                                    "$schema": "https://vega.github.io/schema/vega-lite/v5.16.3.json",
+                                    "datasets": {
+                                      "data-7f9ec1bf3e68e1101f40bba44fb8e5e5": [
+                                        {
+                                          "Edição": "XXX",
+                                          "Metric": "Amarela",
+                                          "Value": 1.3824011659683002
+                                        },
+                                        {
+                                          "Edição": "XXXI",
+                                          "Metric": "Amarela",
+                                          "Value": 1.345487838859918
+                                        },
+                                        {
+                                          "Edição": "XXXII",
+                                          "Metric": "Amarela",
+                                          "Value": 1.31455039620258
+                                        },
+                                        {
+                                          "Edição": "XXXIII",
+                                          "Metric": "Amarela",
+                                          "Value": 1.3622110656088826
+                                        },
+                                        {
+                                          "Edição": "XXXIV",
+                                          "Metric": "Amarela",
+                                          "Value": 1.5907782505409573
+                                        },
+                                        {
+                                          "Edição": "XXXV",
+                                          "Metric": "Amarela",
+                                          "Value": 1.728789847107025
+                                        },
+                                        {
+                                          "Edição": "XXXVI",
+                                          "Metric": "Amarela",
+                                          "Value": 1.82657168128244
+                                        },
+                                        {
+                                          "Edição": "XXXVII",
+                                          "Metric": "Amarela",
+                                          "Value": 1.8439989356100708
+                                        },
+                                        {
+                                          "Edição": "XXXVIII",
+                                          "Metric": "Amarela",
+                                          "Value": 1.8664295728892384
+                                        },
+                                        {
+                                          "Edição": "XXX",
+                                          "Metric": "Branca",
+                                          "Value": 54.71524867917653
+                                        },
+                                        {
+                                          "Edição": "XXXI",
+                                          "Metric": "Branca",
+                                          "Value": 55.66524687180711
+                                        },
+                                        {
+                                          "Edição": "XXXII",
+                                          "Metric": "Branca",
+                                          "Value": 55.657849404739125
+                                        },
+                                        {
+                                          "Edição": "XXXIII",
+                                          "Metric": "Branca",
+                                          "Value": 54.55926617661338
+                                        },
+                                        {
+                                          "Edição": "XXXIV",
+                                          "Metric": "Branca",
+                                          "Value": 53.02836799650611
+                                        },
+                                        {
+                                          "Edição": "XXXV",
+                                          "Metric": "Branca",
+                                          "Value": 53.20588088338163
+                                        },
+                                        {
+                                          "Edição": "XXXVI",
+                                          "Metric": "Branca",
+                                          "Value": 51.76520600355167
+                                        },
+                                        {
+                                          "Edição": "XXXVII",
+                                          "Metric": "Branca",
+                                          "Value": 51.41739371670243
+                                        },
+                                        {
+                                          "Edição": "XXXVIII",
+                                          "Metric": "Branca",
+                                          "Value": 50.72803747905482
+                                        },
+                                        {
+                                          "Edição": "XXX",
+                                          "Metric": "Indígena",
+                                          "Value": 0.5509200218619057
+                                        },
+                                        {
+                                          "Edição": "XXXI",
+                                          "Metric": "Indígena",
+                                          "Value": 0.49228401204835265
+                                        },
+                                        {
+                                          "Edição": "XXXII",
+                                          "Metric": "Indígena",
+                                          "Value": 0.5049190368640661
+                                        },
+                                        {
+                                          "Edição": "XXXIII",
+                                          "Metric": "Indígena",
+                                          "Value": 0.5060457040375136
+                                        },
+                                        {
+                                          "Edição": "XXXIV",
+                                          "Metric": "Indígena",
+                                          "Value": 0.4982762157476459
+                                        },
+                                        {
+                                          "Edição": "XXXV",
+                                          "Metric": "Indígena",
+                                          "Value": 0.5008993704406915
+                                        },
+                                        {
+                                          "Edição": "XXXVI",
+                                          "Metric": "Indígena",
+                                          "Value": 0.4532146701680528
+                                        },
+                                        {
+                                          "Edição": "XXXVII",
+                                          "Metric": "Indígena",
+                                          "Value": 0.454630379273837
+                                        },
+                                        {
+                                          "Edição": "XXXVIII",
+                                          "Metric": "Indígena",
+                                          "Value": 0.4746435044284102
+                                        },
+                                        {
+                                          "Edição": "XXX",
+                                          "Metric": "Parda",
+                                          "Value": 33.82474038987065
+                                        },
+                                        {
+                                          "Edição": "XXXI",
+                                          "Metric": "Parda",
+                                          "Value": 33.15353688149357
+                                        },
+                                        {
+                                          "Edição": "XXXII",
+                                          "Metric": "Parda",
+                                          "Value": 32.88596256172721
+                                        },
+                                        {
+                                          "Edição": "XXXIII",
+                                          "Metric": "Parda",
+                                          "Value": 33.51553263309402
+                                        },
+                                        {
+                                          "Edição": "XXXIV",
+                                          "Metric": "Parda",
+                                          "Value": 34.47899365409175
+                                        },
+                                        {
+                                          "Edição": "XXXV",
+                                          "Metric": "Parda",
+                                          "Value": 34.207304886579394
+                                        },
+                                        {
+                                          "Edição": "XXXVI",
+                                          "Metric": "Parda",
+                                          "Value": 35.24652546847039
+                                        },
+                                        {
+                                          "Edição": "XXXVII",
+                                          "Metric": "Parda",
+                                          "Value": 35.44588313225045
+                                        },
+                                        {
+                                          "Edição": "XXXVIII",
+                                          "Metric": "Parda",
+                                          "Value": 35.80412406387853
+                                        },
+                                        {
+                                          "Edição": "XXX",
+                                          "Metric": "Preta",
+                                          "Value": 9.526689743122608
+                                        },
+                                        {
+                                          "Edição": "XXXI",
+                                          "Metric": "Preta",
+                                          "Value": 9.343444395791039
+                                        },
+                                        {
+                                          "Edição": "XXXII",
+                                          "Metric": "Preta",
+                                          "Value": 9.636718600467022
+                                        },
+                                        {
+                                          "Edição": "XXXIII",
+                                          "Metric": "Preta",
+                                          "Value": 10.056944420646207
+                                        },
+                                        {
+                                          "Edição": "XXXIV",
+                                          "Metric": "Preta",
+                                          "Value": 10.403583883113532
+                                        },
+                                        {
+                                          "Edição": "XXXV",
+                                          "Metric": "Preta",
+                                          "Value": 10.357125012491256
+                                        },
+                                        {
+                                          "Edição": "XXXVI",
+                                          "Metric": "Preta",
+                                          "Value": 10.708482176527456
+                                        },
+                                        {
+                                          "Edição": "XXXVII",
+                                          "Metric": "Preta",
+                                          "Value": 10.838093836163214
+                                        },
+                                        {
+                                          "Edição": "XXXVIII",
+                                          "Metric": "Preta",
+                                          "Value": 11.126765379749
+                                        }
+                                      ]
+                                    }
+                                  };
+                                  var embedOpt = {"actions": false, "mode": "vega-lite"};
+                            
+                                  function showError(el, error){
+                                      el.innerHTML = ('<div style="color:red;">'
+                                                      + '<p>JavaScript Error: ' + error.message + '</p>'
+                                                      + "<p>This usually means there's a typo in your chart specification. "
+                                                      + "See the javascript console for the full traceback.</p>"
+                                                      + '</div>');
+                                      throw error;
+                                  }
+                                  const el = document.getElementById('vis3');
+                                  vegaEmbed("#vis3", spec, embedOpt)
+                                    .catch(error => showError(el, error));
+                                })(vegaEmbed);
+                            
+                              </script>
+                            </body>
+                            </html>
+                        </div>
+                        <div class="description">
+                            <h3>
+                                Inscritos por Cor
+                            </h3>
+                            <p>
+                                Them lion better through are house. Would love remember fell motorcycle. Toad-like fritters potion that twin hedwig tears. Through glory mistletoe lived captivity for aragog mewing.
+                            </p>
+                        </div>
+                        <div class="actions">
+                            <a href="">
+                                <img src="images/icons/share.svg" alt="ícone de compartilhar">
+                            </a>                                
+                            <a href="">
+                                <img src="images/icons/download.svg" alt="ícone de download">
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <section id="aprovacoes" class="text-max-width-container">
+                    <h2>
+                        Aprovações
+                    </h2>
+                    <p>
+                        A dificuldade do Exame é maior em cada edição, buscando melhorar lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh.
+                    </p>
+                    <p>
+                        Them lion better through are house. Would love remember fell motorcycle. Toad-like fritters potion that twin hedwig tears. Through glory mistletoe lived captivity for aragog mewing.
+                    </p>
+                </section>
+                <section id="aprovados-genero">
+                    <div class="card-chart">
+                        <div class="chart">
+                            <!DOCTYPE html>
+                            <html>
+                            <head>
+                            </head>
+                            <body>
+                              <div id="vis4"></div>
+                              <script>
+                                (function(vegaEmbed) {
+                                  var spec = {
+                                    "config": {
+                                      "view": {
+                                        "continuousWidth": 300,
+                                        "continuousHeight": 300,
+                                        "stroke": null
+                                      }
+                                    },
+                                    "hconcat": [
+                                      {
+                                        "data": {
+                                          "name": "data-d51727c020ac31a0e6d58746b4356981"
+                                        },
+                                        "mark": {
+                                          "type": "line",
+                                          "point": true
+                                        },
+                                        "encoding": {
+                                          "color": {
+                                            "field": "Metric",
+                                            "legend": {
+                                              "orient": "bottom",
+                                              "symbolType": "square",
+                                              "title": "Taxa de Participação"
+                                            },
+                                            "scale": {
+                                              "range": [
+                                                "#4169E1",
+                                                "#6495ED",
+                                                "#87CEEB",
+                                                "#87CEFA",
+                                                "#ADD8E6",
+                                                "#B0C4DE",
+                                                "#B0E0E6",
+                                                "#00CED1",
+                                                "#00FFFF",
+                                                "#F0F8FF"
+                                              ]
+                                            },
+                                            "type": "nominal"
+                                          },
+                                          "tooltip": [
+                                            {
+                                              "field": "Edição",
+                                              "type": "nominal"
+                                            },
+                                            {
+                                              "field": "Value",
+                                              "format": ".02f",
+                                              "title": "Taxa de Participação (%)",
+                                              "type": "quantitative"
+                                            }
+                                          ],
+                                          "x": {
+                                            "axis": {
+                                              "grid": false,
+                                              "labelColor": "#888888",
+                                              "titleAnchor": "start",
+                                              "titleColor": "#888888"
+                                            },
+                                            "field": "Edição",
+                                            "type": "nominal"
+                                          },
+                                          "y": {
+                                            "axis": {
+                                              "grid": false,
+                                              "labelColor": "#888888",
+                                              "titleAnchor": "end",
+                                              "titleColor": "#888888"
+                                            },
+                                            "field": "Value",
+                                            "scale": {
+                                              "domain": [0, 80]
+                                            },
+                                            "title": "Taxa de Participação (%)",
+                                            "type": "quantitative"
+                                          }
+                                        },
+                                        // "height": 200,
+                                        // "title": {
+                                        //   "text": "Participação de Gênero por Edição (%)",
+                                        //   "anchor": "start",
+                                        //   "font": "Arial",
+                                        //   "fontSize": 16,
+                                        //   "fontWeight": "normal",
+                                        //   "offset": 10
+                                        // },
+                                        "width": 430
+                                      },
+                                      {
+                                        "data": {
+                                          "name": "data-57179c4f20a97a057a26093dc6910b8f"
+                                        },
+                                        "mark": {
+                                          "type": "text",
+                                          "align": "left",
+                                          "size": 11
+                                        },
+                                        "encoding": {
+                                          "text": {
+                                            "field": "text",
+                                            "type": "nominal"
+                                          }
+                                        }
+                                      }
+                                    ],
+                                    "$schema": "https://vega.github.io/schema/vega-lite/v5.16.3.json",
+                                    "datasets": {
+                                      "data-d51727c020ac31a0e6d58746b4356981": [
+                                        {
+                                          "Edição": "XXX",
+                                          "Metric": "Taxa part. mulheres",
+                                          "Value": 58.447255662109775
+                                        },
+                                        {
+                                          "Edição": "XXXI",
+                                          "Metric": "Taxa part. mulheres",
+                                          "Value": 57.27165973369425
+                                        },
+                                        {
+                                          "Edição": "XXXII",
+                                          "Metric": "Taxa part. mulheres",
+                                          "Value": 58.17833122155317
+                                        },
+                                        {
+                                          "Edição": "XXXIII",
+                                          "Metric": "Taxa part. mulheres",
+                                          "Value": 59.07769457914246
+                                        },
+                                        {
+                                          "Edição": "XXXIV",
+                                          "Metric": "Taxa part. mulheres",
+                                          "Value": 58.3883113531541
+                                        },
+                                        {
+                                          "Edição": "XXXV",
+                                          "Metric": "Taxa part. mulheres",
+                                          "Value": 58.71702308384131
+                                        },
+                                        {
+                                          "Edição": "XXXVI",
+                                          "Metric": "Taxa part. mulheres",
+                                          "Value": 59.412260793845604
+                                        },
+                                        {
+                                          "Edição": "XXXVII",
+                                          "Metric": "Taxa part. mulheres",
+                                          "Value": 59.99252662390234
+                                        },
+                                        {
+                                          "Edição": "XXXVIII",
+                                          "Metric": "Taxa part. mulheres",
+                                          "Value": 58.63215128406798
+                                        },
+                                        {
+                                          "Edição": "XXX",
+                                          "Metric": "Taxa part. homens",
+                                          "Value": 41.552744337890225
+                                        },
+                                        {
+                                          "Edição": "XXXI",
+                                          "Metric": "Taxa part. homens",
+                                          "Value": 42.72834026630575
+                                        },
+                                        {
+                                          "Edição": "XXXII",
+                                          "Metric": "Taxa part. homens",
+                                          "Value": 41.82166877844683
+                                        },
+                                        {
+                                          "Edição": "XXXIII",
+                                          "Metric": "Taxa part. homens",
+                                          "Value": 40.92230542085753
+                                        },
+                                        {
+                                          "Edição": "XXXIV",
+                                          "Metric": "Taxa part. homens",
+                                          "Value": 41.611688646845906
+                                        },
+                                        {
+                                          "Edição": "XXXV",
+                                          "Metric": "Taxa part. homens",
+                                          "Value": 41.28297691615869
+                                        },
+                                        {
+                                          "Edição": "XXXVI",
+                                          "Metric": "Taxa part. homens",
+                                          "Value": 40.587739206154396
+                                        },
+                                        {
+                                          "Edição": "XXXVII",
+                                          "Metric": "Taxa part. homens",
+                                          "Value": 40.00747337609765
+                                        },
+                                        {
+                                          "Edição": "XXXVIII",
+                                          "Metric": "Taxa part. homens",
+                                          "Value": 41.36784871593201
+                                        }
+                                      ],
+                                      "data-57179c4f20a97a057a26093dc6910b8f": [
+                                        {
+                                          "text": [
+                                            "O gráfico expõem a porcentagem de",
+                                            "inscritos referente a cada gênero.",
+                                            "",
+                                            "Em todas as edições consideradas, a",
+                                            "taxa de participação feminina é",
+                                            "superior, em pelo menos 15 pontos",
+                                            "percentuais, a taxa de participação",
+                                            "masculina.",
+                                            "",
+                                            "A menor diferença entre as taxas de",
+                                            "participação é observada na XXXI Edição,",
+                                            "sendo 42,73% dos inscritos homens."
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  };
+                                  var embedOpt = {"mode": "vega-lite"};
+                            
+                                  function showError(el, error){
+                                      el.innerHTML = ('<div style="color:red;">'
+                                                      + '<p>JavaScript Error: ' + error.message + '</p>'
+                                                      + "<p>This usually means there's a typo in your chart specification. "
+                                                      + "See the javascript console for the full traceback.</p>"
+                                                      + '</div>');
+                                      throw error;
+                                  }
+                                  const el = document.getElementById('vis4');
+                                  vegaEmbed("#vis4", spec, embedOpt)
+                                    .catch(error => showError(el, error));
+                                })(vegaEmbed);
+                            
+                              </script>
+                            </body>
+                            </html>
+                        </div>
+                        <div class="description">
+                            <h3>
+                                Aprovados por Gênero
+                            </h3>
+                            <p>
+                                O gráfico expõem a porcentagem de inscritos referente a cada gênero.
+                            </p>
+                            <p>
+                                Em todas as edições consideradas, a taxa de participação feminina é superior, em pelo menos 15 pontos percentuais, a taxa de participação masculina.
+                            </p>
+                            <p>
+                                A menor diferença entre as taxas de participação é observada na XXXI Edição, sendo 42,73% dos inscritos homens.
+                            </p>
+                        </div>
+                        <div class="actions">
+                            <a href="">
+                                <img src="images/icons/share.svg" alt="ícone de compartilhar">
+                            </a>                                
+                            <a href="">
+                                <img src="images/icons/download.svg" alt="ícone de download">
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <section id="aprovados-cor">
+                    <div class="card-chart">
+                        <div class="chart">
+                            <!DOCTYPE html>
+                            <html>
+                            <head>
+                            </head>
+                            <body>
+                              <div id="vis5"></div>
+                              <script>
+                                (function(vegaEmbed) {
+                                  var spec = {
+                                    "config": {
+                                      "view": {
+                                        "continuousWidth": 430,
+                                        "continuousHeight": 300,
+                                        "stroke": null
+                                      }
+                                    },
+                                    "data": {
+                                      "name": "data-d0b16f6722db09f8ca9ad0b53bc58b8e"
+                                    },
+                                    "mark": {
+                                      "type": "line",
+                                      "point": true
+                                    },
+                                    "encoding": {
+                                      "color": {
+                                        "field": "CorRaca",
+                                        "legend": {
+                                          "orient": "bottom",
+                                          "symbolType": "square"
+                                        },
+                                        "scale": {
+                                          "range": [
+                                            "#4169E1",
+                                            "#6495ED",
+                                            "#87CEEB",
+                                            "#87CEFA",
+                                            "#ADD8E6",
+                                            "#B0C4DE",
+                                            "#B0E0E6",
+                                            "#00CED1",
+                                            "#00FFFF",
+                                            "#F0F8FF"
+                                          ]
+                                        },
+                                        "title": "Etnia",
+                                        "type": "nominal"
+                                      },
+                                      "tooltip": [
+                                        {
+                                          "field": "Edição",
+                                          "type": "nominal"
+                                        },
+                                        {
+                                          "field": "CorRaca",
+                                          "title": "Etnia",
+                                          "type": "nominal"
+                                        },
+                                        {
+                                          "field": "Taxa aprovação",
+                                          "format": ".02f",
+                                          "title": "Taxa de Aprovação (%)",
+                                          "type": "quantitative"
+                                        }
+                                      ],
+                                      "x": {
+                                        "axis": {
+                                          "grid": false,
+                                          "labelColor": "#888888",
+                                          "titleAnchor": "start",
+                                          "titleColor": "#888888"
+                                        },
+                                        "field": "Edição",
+                                        "type": "nominal"
+                                      },
+                                      "y": {
+                                        "axis": {
+                                          "grid": false,
+                                          "labelColor": "#888888",
+                                          "titleAnchor": "end",
+                                          "titleColor": "#888888"
+                                        },
+                                        "field": "Taxa aprovação",
+                                        "title": "Taxa de Aprovação (%)",
+                                        "type": "quantitative"
+                                      }
+                                    },
+                                    // "height": 200,
+                                    // "title": {
+                                    //   "text": "Porcentagem de Aprovados de Cada Etnia",
+                                    //   "anchor": "start",
+                                    //   "font": "Arial",
+                                    //   "fontSize": 16,
+                                    //   "fontWeight": "normal",
+                                    //   "offset": 10
+                                    // },
+                                    "width": 430,
+                                    "$schema": "https://vega.github.io/schema/vega-lite/v5.16.3.json",
+                                    "datasets": {
+                                      "data-d0b16f6722db09f8ca9ad0b53bc58b8e": [
+                                        {
+                                          "Edição": "XXX",
+                                          "CorRaca": "Amarela",
+                                          "Aprovado": 284.0,
+                                          "Reprovado": 1613.0,
+                                          "Total": 1897.0,
+                                          "Taxa aprovação": 14.971006852925672
+                                        },
+                                        {
+                                          "Edição": "XXX",
+                                          "CorRaca": "Branca",
+                                          "Aprovado": 13300.0,
+                                          "Reprovado": 61783.0,
+                                          "Total": 75083.0,
+                                          "Taxa aprovação": 17.713730138646564
+                                        },
+                                        {
+                                          "Edição": "XXX",
+                                          "CorRaca": "Indígena",
+                                          "Aprovado": 77.0,
+                                          "Reprovado": 679.0,
+                                          "Total": 756.0,
+                                          "Taxa aprovação": 10.185185185185185
+                                        },
+                                        {
+                                          "Edição": "XXX",
+                                          "CorRaca": "Parda",
+                                          "Aprovado": 6881.0,
+                                          "Reprovado": 39535.0,
+                                          "Total": 46416.0,
+                                          "Taxa aprovação": 14.824629438124784
+                                        },
+                                        {
+                                          "Edição": "XXX",
+                                          "CorRaca": "Preta",
+                                          "Aprovado": 1798.0,
+                                          "Reprovado": 11275.0,
+                                          "Total": 13073.0,
+                                          "Taxa aprovação": 13.7535378260537
+                                        },
+                                        {
+                                          "Edição": "XXXI",
+                                          "CorRaca": "Amarela",
+                                          "Aprovado": 316.0,
+                                          "Reprovado": 1712.0,
+                                          "Total": 2028.0,
+                                          "Taxa aprovação": 15.581854043392504
+                                        },
+                                        {
+                                          "Edição": "XXXI",
+                                          "CorRaca": "Branca",
+                                          "Aprovado": 17368.0,
+                                          "Reprovado": 66534.0,
+                                          "Total": 83902.0,
+                                          "Taxa aprovação": 20.700340873876666
+                                        },
+                                        {
+                                          "Edição": "XXXI",
+                                          "CorRaca": "Indígena",
+                                          "Aprovado": 90.0,
+                                          "Reprovado": 652.0,
+                                          "Total": 742.0,
+                                          "Taxa aprovação": 12.129380053908356
+                                        },
+                                        {
+                                          "Edição": "XXXI",
+                                          "CorRaca": "Parda",
+                                          "Aprovado": 8199.0,
+                                          "Reprovado": 41772.0,
+                                          "Total": 49971.0,
+                                          "Taxa aprovação": 16.407516359488504
+                                        },
+                                        {
+                                          "Edição": "XXXI",
+                                          "CorRaca": "Preta",
+                                          "Aprovado": 2090.0,
+                                          "Reprovado": 11993.0,
+                                          "Total": 14083.0,
+                                          "Taxa aprovação": 14.840587942909892
+                                        },
+                                        {
+                                          "Edição": "XXXII",
+                                          "CorRaca": "Amarela",
+                                          "Aprovado": 562.0,
+                                          "Reprovado": 2872.0,
+                                          "Total": 3434.0,
+                                          "Taxa aprovação": 16.365754222481073
+                                        },
+                                        {
+                                          "Edição": "XXXII",
+                                          "CorRaca": "Branca",
+                                          "Aprovado": 29809.0,
+                                          "Reprovado": 115586.0,
+                                          "Total": 145395.0,
+                                          "Taxa aprovação": 20.502080539220742
+                                        },
+                                        {
+                                          "Edição": "XXXII",
+                                          "CorRaca": "Indígena",
+                                          "Aprovado": 169.0,
+                                          "Reprovado": 1150.0,
+                                          "Total": 1319.0,
+                                          "Taxa aprovação": 12.812736921910538
+                                        },
+                                        {
+                                          "Edição": "XXXII",
+                                          "CorRaca": "Parda",
+                                          "Aprovado": 13683.0,
+                                          "Reprovado": 72225.0,
+                                          "Total": 85908.0,
+                                          "Taxa aprovação": 15.927503841318618
+                                        },
+                                        {
+                                          "Edição": "XXXII",
+                                          "CorRaca": "Preta",
+                                          "Aprovado": 3663.0,
+                                          "Reprovado": 21511.0,
+                                          "Total": 25174.0,
+                                          "Taxa aprovação": 14.55072694049416
+                                        },
+                                        {
+                                          "Edição": "XXXIII",
+                                          "CorRaca": "Amarela",
+                                          "Aprovado": 609.0,
+                                          "Reprovado": 1776.0,
+                                          "Total": 2385.0,
+                                          "Taxa aprovação": 25.534591194968552
+                                        },
+                                        {
+                                          "Edição": "XXXIII",
+                                          "CorRaca": "Branca",
+                                          "Aprovado": 29909.0,
+                                          "Reprovado": 65615.0,
+                                          "Total": 95524.0,
+                                          "Taxa aprovação": 31.310456011054814
+                                        },
+                                        {
+                                          "Edição": "XXXIII",
+                                          "CorRaca": "Indígena",
+                                          "Aprovado": 162.0,
+                                          "Reprovado": 724.0,
+                                          "Total": 886.0,
+                                          "Taxa aprovação": 18.284424379232505
+                                        },
+                                        {
+                                          "Edição": "XXXIII",
+                                          "CorRaca": "Parda",
+                                          "Aprovado": 15062.0,
+                                          "Reprovado": 43618.0,
+                                          "Total": 58680.0,
+                                          "Taxa aprovação": 25.668029993183367
+                                        },
+                                        {
+                                          "Edição": "XXXIII",
+                                          "CorRaca": "Preta",
+                                          "Aprovado": 4291.0,
+                                          "Reprovado": 13317.0,
+                                          "Total": 17608.0,
+                                          "Taxa aprovação": 24.369604725124944
+                                        },
+                                        {
+                                          "Edição": "XXXIV",
+                                          "CorRaca": "Amarela",
+                                          "Aprovado": 371.0,
+                                          "Reprovado": 2033.0,
+                                          "Total": 2404.0,
+                                          "Taxa aprovação": 15.43261231281198
+                                        },
+                                        {
+                                          "Edição": "XXXIV",
+                                          "CorRaca": "Branca",
+                                          "Aprovado": 14288.0,
+                                          "Reprovado": 65849.0,
+                                          "Total": 80137.0,
+                                          "Taxa aprovação": 17.829467037697945
+                                        },
+                                        {
+                                          "Edição": "XXXIV",
+                                          "CorRaca": "Indígena",
+                                          "Aprovado": 75.0,
+                                          "Reprovado": 678.0,
+                                          "Total": 753.0,
+                                          "Taxa aprovação": 9.9601593625498
+                                        },
+                                        {
+                                          "Edição": "XXXIV",
+                                          "CorRaca": "Parda",
+                                          "Aprovado": 7962.0,
+                                          "Reprovado": 44143.0,
+                                          "Total": 52105.0,
+                                          "Taxa aprovação": 15.280683235773918
+                                        },
+                                        {
+                                          "Edição": "XXXIV",
+                                          "CorRaca": "Preta",
+                                          "Aprovado": 2156.0,
+                                          "Reprovado": 13566.0,
+                                          "Total": 15722.0,
+                                          "Taxa aprovação": 13.713268032056991
+                                        },
+                                        {
+                                          "Edição": "XXXV",
+                                          "CorRaca": "Amarela",
+                                          "Aprovado": 535.0,
+                                          "Reprovado": 2233.0,
+                                          "Total": 2768.0,
+                                          "Taxa aprovação": 19.328034682080926
+                                        },
+                                        {
+                                          "Edição": "XXXV",
+                                          "CorRaca": "Branca",
+                                          "Aprovado": 20031.0,
+                                          "Reprovado": 65158.0,
+                                          "Total": 85189.0,
+                                          "Taxa aprovação": 23.513599173602227
+                                        },
+                                        {
+                                          "Edição": "XXXV",
+                                          "CorRaca": "Indígena",
+                                          "Aprovado": 107.0,
+                                          "Reprovado": 695.0,
+                                          "Total": 802.0,
+                                          "Taxa aprovação": 13.341645885286782
+                                        },
+                                        {
+                                          "Edição": "XXXV",
+                                          "CorRaca": "Parda",
+                                          "Aprovado": 10088.0,
+                                          "Reprovado": 44682.0,
+                                          "Total": 54770.0,
+                                          "Taxa aprovação": 18.418842431988313
+                                        },
+                                        {
+                                          "Edição": "XXXV",
+                                          "CorRaca": "Preta",
+                                          "Aprovado": 2838.0,
+                                          "Reprovado": 13745.0,
+                                          "Total": 16583.0,
+                                          "Taxa aprovação": 17.113911837423867
+                                        },
+                                        {
+                                          "Edição": "XXXVI",
+                                          "CorRaca": "Amarela",
+                                          "Aprovado": 415.0,
+                                          "Reprovado": 2249.0,
+                                          "Total": 2664.0,
+                                          "Taxa aprovação": 15.578078078078079
+                                        },
+                                        {
+                                          "Edição": "XXXVI",
+                                          "CorRaca": "Branca",
+                                          "Aprovado": 13141.0,
+                                          "Reprovado": 62357.0,
+                                          "Total": 75498.0,
+                                          "Taxa aprovação": 17.405759092956107
+                                        },
+                                        {
+                                          "Edição": "XXXVI",
+                                          "CorRaca": "Indígena",
+                                          "Aprovado": 74.0,
+                                          "Reprovado": 587.0,
+                                          "Total": 661.0,
+                                          "Taxa aprovação": 11.195158850226928
+                                        },
+                                        {
+                                          "Edição": "XXXVI",
+                                          "CorRaca": "Parda",
+                                          "Aprovado": 7249.0,
+                                          "Reprovado": 44157.0,
+                                          "Total": 51406.0,
+                                          "Taxa aprovação": 14.10146675485352
+                                        },
+                                        {
+                                          "Edição": "XXXVI",
+                                          "CorRaca": "Preta",
+                                          "Aprovado": 2067.0,
+                                          "Reprovado": 13551.0,
+                                          "Total": 15618.0,
+                                          "Taxa aprovação": 13.23472915866308
+                                        },
+                                        {
+                                          "Edição": "XXXVII",
+                                          "CorRaca": "Amarela",
+                                          "Aprovado": 711.0,
+                                          "Reprovado": 2546.0,
+                                          "Total": 3257.0,
+                                          "Taxa aprovação": 21.829904820386858
+                                        },
+                                        {
+                                          "Edição": "XXXVII",
+                                          "CorRaca": "Branca",
+                                          "Aprovado": 22774.0,
+                                          "Reprovado": 68043.0,
+                                          "Total": 90817.0,
+                                          "Taxa aprovação": 25.07680280123765
+                                        },
+                                        {
+                                          "Edição": "XXXVII",
+                                          "CorRaca": "Indígena",
+                                          "Aprovado": 103.0,
+                                          "Reprovado": 700.0,
+                                          "Total": 803.0,
+                                          "Taxa aprovação": 12.826899128268993
+                                        },
+                                        {
+                                          "Edição": "XXXVII",
+                                          "CorRaca": "Parda",
+                                          "Aprovado": 12989.0,
+                                          "Reprovado": 49618.0,
+                                          "Total": 62607.0,
+                                          "Taxa aprovação": 20.74688133914738
+                                        },
+                                        {
+                                          "Edição": "XXXVII",
+                                          "CorRaca": "Preta",
+                                          "Aprovado": 3638.0,
+                                          "Reprovado": 15505.0,
+                                          "Total": 19143.0,
+                                          "Taxa aprovação": 19.004335788538892
+                                        },
+                                        {
+                                          "Edição": "XXXVIII",
+                                          "CorRaca": "Amarela",
+                                          "Aprovado": 392.0,
+                                          "Reprovado": 2337.0,
+                                          "Total": 2729.0,
+                                          "Taxa aprovação": 14.364235983876878
+                                        },
+                                        {
+                                          "Edição": "XXXVIII",
+                                          "CorRaca": "Branca",
+                                          "Aprovado": 12450.0,
+                                          "Reprovado": 61722.0,
+                                          "Total": 74172.0,
+                                          "Taxa aprovação": 16.785309820417407
+                                        },
+                                        {
+                                          "Edição": "XXXVIII",
+                                          "CorRaca": "Indígena",
+                                          "Aprovado": 76.0,
+                                          "Reprovado": 618.0,
+                                          "Total": 694.0,
+                                          "Taxa aprovação": 10.951008645533141
+                                        },
+                                        {
+                                          "Edição": "XXXVIII",
+                                          "CorRaca": "Parda",
+                                          "Aprovado": 7267.0,
+                                          "Reprovado": 45084.0,
+                                          "Total": 52351.0,
+                                          "Taxa aprovação": 13.88130121678669
+                                        },
+                                        {
+                                          "Edição": "XXXVIII",
+                                          "CorRaca": "Preta",
+                                          "Aprovado": 2083.0,
+                                          "Reprovado": 14186.0,
+                                          "Total": 16269.0,
+                                          "Taxa aprovação": 12.803491302477104
+                                        }
+                                      ]
+                                    }
+                                  };
+                                  var embedOpt = {"actions": false, "mode": "vega-lite"};
+                            
+                                  function showError(el, error){
+                                      el.innerHTML = ('<div style="color:red;">'
+                                                      + '<p>JavaScript Error: ' + error.message + '</p>'
+                                                      + "<p>This usually means there's a typo in your chart specification. "
+                                                      + "See the javascript console for the full traceback.</p>"
+                                                      + '</div>');
+                                      throw error;
+                                  }
+                                  const el = document.getElementById('vis5');
+                                  vegaEmbed("#vis5", spec, embedOpt)
+                                    .catch(error => showError(el, error));
+                                })(vegaEmbed);
+                            
+                              </script>
+                            </body>
+                            </html>
+                        </div>
+                        <div class="description">
+                            <h3>
+                                Aprovados por Cor
+                            </h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh.
+                            </p>
+                            <p>
+                                Them lion better through are house. Would love remember fell motorcycle. Toad-like fritters potion that twin hedwig tears. Through glory mistletoe lived captivity for aragog mewing.
+                            </p>
+                        </div>
+                        <div class="actions">
+                            <a href="">
+                                <img src="images/icons/share.svg" alt="ícone de compartilhar">
+                            </a>                                
+                            <a href="">
+                                <img src="images/icons/download.svg" alt="ícone de download">
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="toc-container">
+                <div class="toc">
+                    <div class="header">
+                        <div class="label">sumário</div>
+                        <div class="scroll-to-top">
+                            <a onclick="smoothScrollToTop()">
+                                <img src="images/icons/arrow-up.svg" alt="seta para cima">
+                            </a>
+                        </div>
+                    </div>
+                    <ul>
+                        <li><a href="#intro">Introdução</a></li>
+                        <!-- <li><a href="#inscricoes">Inscrições</a></li> -->
+                        <li><a href="#inscricoes-absoluto-genero">Inscritos por Gênero</a></li>
+                        <li><a href="#inscricoes-percent-genero">Inscritos (%) por Gênero</a></li>
+                        <li><a href="#inscricoes-percent-cor">Inscritos (%) por Cor</a></li>
+                        <!-- <li><a href="#aprovacoes">Aprovações</a></li> -->
+                        <li><a href="#aprovados-genero">Aprovados por Gênero</a></li>
+                        <li><a href="#aprovados-cor">Aprovados por Cor</a></li>
+                        <li><a href="#aprovados-uf">Aprovados por UF</a></li>
+                        <li><a href="#Aprovados-instituicao">Aprovados por Instituição</a></li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer id="page-footer">
+        <div class="sponsor">Realização:</div>
+        <div>
+            <img src="images/logo-oab.png" alt="" width="94">
+        </div>
+        <div>
+            <img src="images/logo-exame.png" alt="" width="94">
+        </div>
+        <div>
+            <img src="images/logo-fgv.png" alt="" width="130">
+        </div>
+    </footer>
+
+    
+    </body>
+    </html>
+    
+    <script>
+        // FUNÇÃO PARA ROLAR A PÁGINA PARA O TOPO =======================================================
+        function smoothScrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // ESCONDER O FOOTER AO ROLAR A PÁGINA =======================================================
+        window.addEventListener('scroll', function() {
+            var footer = document.getElementById('page-footer');
+            if (window.pageYOffset > 0) {
+                footer.classList.add('hidden');
+            } else {
+                footer.classList.remove('hidden');
+            }
+        });
+
+        // DROPDOWN DO HEADER =======================================================
+        // Get the toggle button and menu elements
+        const dropdownToggle = document.querySelector('.dropdown-toggle');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+        // Add click event listener to the toggle button
+        dropdownToggle.addEventListener('click', (event) => {
+            // Prevent the event from bubbling up to the document
+            event.stopPropagation();
+            // Toggle the visibility of the menu
+            dropdownMenu.classList.toggle('show');
+        });
+        // Close the dropdown when clicking outside the menu
+        document.addEventListener('click', (event) => {
+            const targetElement = event.target;
+            if (!dropdownMenu.contains(targetElement)) {
+                dropdownMenu.classList.remove('show');
+            }
+        });
+        
+        // FUNCIONAMENTO DO SUMARIO =======================================================
+        // Get all the links in the table of contents
+        const links = document.querySelectorAll('.toc a');
+        // Function to check which section is currently visible
+        function updateActiveLink() {
+            for (const link of links) {
+                // Check if link.hash is not empty
+                if (link.hash) {
+                    const section = document.querySelector(link.hash);
+                    // Check if section is not null
+                    if (section) {
+                        const rect = section.getBoundingClientRect();
+                        if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+                            link.classList.add('active');
+                        } else {
+                            link.classList.remove('active');
+                        }
+                    }
+                }
+            }
+        }
+        // Listen for the scroll event
+        window.addEventListener('scroll', updateActiveLink);
+        // Update the active link when the page loads
+        updateActiveLink();
+
+        // FUNCIONAMENTO DO BOTÃO DE VER MAIS DETALHES DOS GRÁFICOS =======================================================
+        // Get all elements with the class '.expand-toggle'
+        const toggles = document.querySelectorAll('.expand-toggle');
+
+        // Add a click event listener to each toggle
+        toggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                // Get the parent element with the '.description' class
+                const parent = toggle.closest('.description');
+                // Check if the parent exists
+                if (parent) {
+                    // If the parent is already expanded, collapse it
+                    if (parent.classList.contains('expanded')) {
+                        parent.style.maxHeight = null;
+                        parent.classList.remove('expanded');
+
+                        // Scroll the window to the top of the .description element
+                        window.scrollTo({ top: parent.offsetTop, behavior: 'smooth' });
+                    } else {
+                        // Otherwise, expand it to its scroll height
+                        parent.style.maxHeight = `${parent.scrollHeight}px`;
+                        parent.classList.add('expanded');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
