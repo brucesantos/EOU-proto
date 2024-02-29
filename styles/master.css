@@ -83,6 +83,8 @@ h4 {
 
 p {
   line-height: 1.6;
+  color: #666;
+  margin-bottom: 1rem;
 }
 
 section {
@@ -99,15 +101,11 @@ section {
 }
 
 #intro {
-  margin-top: 128px;
+  margin-top: 64px;
 }
 
 main {
   display: flex;
-}
-main p {
-  color: #666;
-  margin-bottom: 1rem;
 }
 main .content {
   flex: 1;
@@ -160,6 +158,9 @@ header .nav > * > a.active {
 }
 header .nav > * > a:hover {
   padding-bottom: 0.5rem;
+}
+header .nav > *:last-child a.active {
+  border-radius: 0 4px 4px 0;
 }
 header ul {
   list-style: none;
@@ -234,12 +235,12 @@ footer {
   left: 0;
   right: 0;
   background-color: #ECF0F4;
-  padding: 0 1rem 1rem;
+  padding: 0.75rem;
   display: flex;
   justify-content: center;
   gap: 8rem;
   align-items: center;
-  box-shadow: 0px -40px 25px 0px #ECF0F4;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
   transition: all 0.6s ease-in-out;
 }
 footer .sponsor {
@@ -262,7 +263,7 @@ footer img:hover {
 }
 
 .toc {
-  margin-top: 128px;
+  margin-top: 64px;
   position: sticky;
   top: 24px;
   width: 246px;
@@ -329,6 +330,7 @@ footer img:hover {
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 .toc ul li a {
+  font-size: 14px;
   display: block;
   padding: 0.5rem 1rem;
   text-decoration: none;
@@ -349,12 +351,17 @@ footer img:hover {
 .toc ul li:last-child {
   border-bottom: none;
 }
+.toc ul li:last-child a {
+  border-radius: 0 0 4px 8px;
+}
 
 .card-chart {
+  position: relative;
   width: 100%;
   background-color: #FFF;
   border-radius: 8px;
   padding: 16px;
+  padding-right: 48px;
   display: flex;
   gap: 2rem;
 }
@@ -366,10 +373,10 @@ footer img:hover {
   max-width: 470px;
 }
 .card-chart .description {
-  max-height: 370px;
+  max-height: 300px;
   overflow-y: hidden;
   position: relative;
-  transition: all 1s cubic-bezier(0.42, 0.66, 0.26, 1.28);
+  transition: all 0.6s cubic-bezier(0.42, 0.66, 0.26, 1.28);
   padding-bottom: 40px;
 }
 .card-chart .description.expanded .expand-toggle {
@@ -378,6 +385,10 @@ footer img:hover {
 }
 .card-chart .description.expanded .expand-toggle:hover {
   transform: translateY(-3px);
+}
+.card-chart .description.expanded .expand-toggle::before {
+  content: "-";
+  margin-right: 0.5rem;
 }
 .card-chart .description .expand-toggle {
   color: #1A569E;
@@ -398,25 +409,50 @@ footer img:hover {
   transform: translateY(3px);
   box-shadow: 0 -10px 40px 20px #FFF;
 }
-.card-chart .actions {
+.card-chart .description .expand-toggle::before {
+  content: "+";
+  margin-right: 0.5rem;
+}
+
+.card-chart-stack {
+  position: relative;
+  width: 100%;
+  background-color: #FFF;
+  border-radius: 8px;
+  padding: 16px;
+  padding-right: 48px;
+}
+.card-chart-stack .chart {
+  text-align: center;
+  margin: 1rem 0;
+}
+.card-chart-stack .description {
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+
+.card-chart-actions {
+  position: absolute;
+  right: 8px;
+  top: 8px;
   padding: 0.5rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
-.card-chart .actions > a {
+.card-chart-actions > a {
   opacity: 0.5;
   transition: all 0.3s ease;
 }
-.card-chart .actions > a:hover {
+.card-chart-actions > a:hover {
   background-color: rgba(255, 255, 255, 0.5);
   color: #333;
 }
-.card-chart .actions > a.active {
+.card-chart-actions > a.active {
   background-color: #FFF;
   color: #111;
 }
-.card-chart .actions > a:hover {
+.card-chart-actions > a:hover {
   opacity: 0.8;
   transform: translateX(3px);
 }

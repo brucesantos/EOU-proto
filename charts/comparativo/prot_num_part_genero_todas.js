@@ -1,0 +1,16 @@
+(function(vegaEmbed) {
+  var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300, "stroke": null}}, "data": {"name": "data-ed7b8427e9e4185799c851f3862bc4ac"}, "mark": {"type": "line", "point": true}, "encoding": {"color": {"field": "Metric", "legend": {"orient": "bottom", "symbolType": "square", "title": "Taxa de Participa\u00e7\u00e3o"}, "scale": {"range": ["#9B0A51", "#3BAE96"]}, "type": "nominal"}, "tooltip": [{"field": "Edi\u00e7\u00e3o", "type": "nominal"}, {"field": "Value", "title": "Taxa de Participa\u00e7\u00e3o (#)", "type": "quantitative"}], "x": {"axis": {"grid": false, "labelAngle": 0, "labelColor": "#888888", "labelFont": "Arial", "labelFontSize": 8, "titleAnchor": "start", "titleColor": "#888888", "titleFont": "Arial", "titleFontSize": 13, "titleFontWeight": "normal"}, "field": "Edi\u00e7\u00e3o", "type": "nominal"}, "y": {"axis": {"grid": false, "labelAngle": 0, "labelColor": "#888888", "labelFont": "Arial", "titleAnchor": "start", "titleColor": "#888888", "titleFont": "Arial", "titleFontSize": 13, "titleFontWeight": "normal"}, "field": "Value", "title": "Taxa de Participa\u00e7\u00e3o (#)", "type": "quantitative"}}, "height": 200, "width": 400, "$schema": "https://vega.github.io/schema/vega-lite/v5.16.3.json", "datasets": {"data-ed7b8427e9e4185799c851f3862bc4ac": [{"Edi\u00e7\u00e3o": "XXX", "Metric": "Feminino", "Value": 80206}, {"Edi\u00e7\u00e3o": "XXXI", "Metric": "Feminino", "Value": 86325}, {"Edi\u00e7\u00e3o": "XXXII", "Metric": "Feminino", "Value": 151981}, {"Edi\u00e7\u00e3o": "XXXIII", "Metric": "Feminino", "Value": 103435}, {"Edi\u00e7\u00e3o": "XXXIV", "Metric": "Feminino", "Value": 88237}, {"Edi\u00e7\u00e3o": "XXXV", "Metric": "Feminino", "Value": 94013}, {"Edi\u00e7\u00e3o": "XXXVI", "Metric": "Feminino", "Value": 86651}, {"Edi\u00e7\u00e3o": "XXXVII", "Metric": "Feminino", "Value": 105963}, {"Edi\u00e7\u00e3o": "XXXVIII", "Metric": "Feminino", "Value": 85729}, {"Edi\u00e7\u00e3o": "XXX", "Metric": "Masculino", "Value": 57022}, {"Edi\u00e7\u00e3o": "XXXI", "Metric": "Masculino", "Value": 64404}, {"Edi\u00e7\u00e3o": "XXXII", "Metric": "Masculino", "Value": 109252}, {"Edi\u00e7\u00e3o": "XXXIII", "Metric": "Masculino", "Value": 71648}, {"Edi\u00e7\u00e3o": "XXXIV", "Metric": "Masculino", "Value": 62884}, {"Edi\u00e7\u00e3o": "XXXV", "Metric": "Masculino", "Value": 66099}, {"Edi\u00e7\u00e3o": "XXXVI", "Metric": "Masculino", "Value": 59196}, {"Edi\u00e7\u00e3o": "XXXVII", "Metric": "Masculino", "Value": 70664}, {"Edi\u00e7\u00e3o": "XXXVIII", "Metric": "Masculino", "Value": 60486}]}};
+  var embedOpt = {"actions": false, "mode": "vega-lite"};
+
+  function showError(el, error){
+      el.innerHTML = ('<div style="color:red;">'
+                      + '<p>JavaScript Error: ' + error.message + '</p>'
+                      + "<p>This usually means there's a typo in your chart specification. "
+                      + "See the javascript console for the full traceback.</p>"
+                      + '</div>');
+      throw error;
+  }
+  const el = document.getElementById('num_part_genero_todas');
+  vegaEmbed("#num_part_genero_todas", spec, embedOpt)
+    .catch(error => showError(el, error));
+})(vegaEmbed);

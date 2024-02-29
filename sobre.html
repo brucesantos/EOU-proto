@@ -1,0 +1,168 @@
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/master.css">
+    <title>EOU</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                Exame de ordem em números
+            </div>
+            <ul class="nav">
+                <li><a href="index.html">Comparativo</a></li>
+                <li class="dropdown-container">
+                    <a class="dropdown-toggle">
+                        Exames
+                        <img src="images/icons/angle-down.svg" alt="icone que aponta para baixo em forma de seta">
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="exame-xxx.html" value="40">40º (2023)</a>
+                        <a href="exame-xxx.html" value="39">39º (2023)</a>
+                        <a href="exame-xxx.html" value="38">XXXVIII (2023)</a>
+                        <a href="exame-xxx.html" value="37">XXXVII (2022)</a>
+                        <a href="exame-xxx.html" value="36">XXXVI (2022)</a>
+                        <a href="exame-xxx.html" value="35">XXXV (2022)</a>
+                    </div>
+                </li>
+                <li><a href="sobre.html" class="active">Sobre</a></li>
+            </ul>
+        </header>
+        <main>
+            <div class="content">
+                <section id="intro" class="text-max-width-container">
+                    <h1>
+                        Sobre o Exame de Ordem em Números
+                    </h1>
+                    <p>
+                        A 38ª edição do Exame de Ordem ocorreu entre julho e setembro de 2023 e contou com mais de 146 mil inscritos. Na primeira fase, estavam presentes 94.480 examinandas e examinandos. Destes, 27.321 foram habilitados para realizar a segunda fase do Exame. O índice de aprovação final do 38º Exame de Ordem Unificado foi de 14,11% em comparação ao número de aprovados para a segunda fase, totalizando 20.210 novos advogados nos quadros da OAB.  Desde o início da parceria entre a Fundação Getulio Vargas e a Ordem dos Advogados do Brasil, a 38ª edição foi a sétima maior em números de inscritos. 
+                    </p>
+                    <p>
+                        O Exame de Ordem em números é um estudo realizado pela Fundação Getulio Vargas, que analisa os dados gerados pela aplicação dos Exames de Ordem Unificados do Brasil. Com o objetivo de ampliar o alcance das informações sistematizadas sobre o EOU para escolas e estudantes de Direito, profissionais da advocacia e demais interessados, a FGV Conhecimento passa a disponibilizar as análises estatísticas em uma plataforma interativa-responsiva com acesso em suportes como smartphones, tablets e computadores. 
+                    </p>
+                    <p>
+                        Com o tempo, a plataforma digital irá reunir em um único lugar todos os dados do EOU desde o segundo volume, tornando-os dinâmicos e comparativos, além de acrescentar novos recortes, novas análises e cruzamentos de dados mais complexos que permitirão adquirir novas respostas que abranjam questões de cunho socioeconômico, atuação dos programas de financiamento estudantil, inserção dos aprovados no mercado de trabalho etc.
+                    </p>
+                    <p>
+                        O primeiro volume do Exame de Ordem em números, em forma de publicação impressa, foi lançado em 2013 e abarcava um compilado de dados desde 2010, ano em que se firmou a parceria entre a FGV e a Ordem dos Advogados do Brasil. 
+                    </p>
+                    <p>
+                        Ao longo destes 13 anos, o estudo tornou-se uma medição confiável da eficácia e do desempenho não apenas das instituições de ensino de Direito no país, mas também dos novos advogados que chegam ao mercado de trabalho. O objetivo é oferecer um material de referência, cujos indicadores sejam parâmetros para pesquisas e estudos da área e de outros campos de atuação que impliquem diretamente em políticas públicas. Além disso, essas análises contribuem na melhoria de processos e procedimentos para a manutenção dos indicadores positivos e o aprimoramento daqueles que se encontram aquém do esperado.
+                    </p>
+                </section>
+                
+        </main>
+    </div>
+    
+    <footer id="page-footer">
+        <div class="sponsor">Realização:</div>
+        <div>
+            <img src="images/logo-oab.png" alt="" width="94">
+        </div>
+        <div>
+            <img src="images/logo-exame.png" alt="" width="94">
+        </div>
+        <div>
+            <img src="images/logo-fgv.png" alt="" width="130">
+        </div>
+    </footer>
+    
+    </body>
+    </html>
+    
+    <script>
+        // FUNÇÃO PARA ROLAR A PÁGINA PARA O TOPO =======================================================
+        function smoothScrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // ESCONDER O FOOTER AO ROLAR A PÁGINA =======================================================
+        window.addEventListener('scroll', function() {
+            var footer = document.getElementById('page-footer');
+            if (window.pageYOffset > 0) {
+                footer.classList.add('hidden');
+            } else {
+                footer.classList.remove('hidden');
+            }
+        });
+
+        // DROPDOWN DO HEADER =======================================================
+        // Get the toggle button and menu elements
+        const dropdownToggle = document.querySelector('.dropdown-toggle');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+        // Add click event listener to the toggle button
+        dropdownToggle.addEventListener('click', (event) => {
+            // Prevent the event from bubbling up to the document
+            event.stopPropagation();
+            // Toggle the visibility of the menu
+            dropdownMenu.classList.toggle('show');
+        });
+        // Close the dropdown when clicking outside the menu
+        document.addEventListener('click', (event) => {
+            const targetElement = event.target;
+            if (!dropdownMenu.contains(targetElement)) {
+                dropdownMenu.classList.remove('show');
+            }
+        });
+        
+        // FUNCIONAMENTO DO SUMARIO =======================================================
+        // Get all the links in the table of contents
+        const links = document.querySelectorAll('.toc a');
+        // Function to check which section is currently visible
+        function updateActiveLink() {
+            for (const link of links) {
+                // Check if link.hash is not empty
+                if (link.hash) {
+                    const section = document.querySelector(link.hash);
+                    // Check if section is not null
+                    if (section) {
+                        const rect = section.getBoundingClientRect();
+                        if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+                            link.classList.add('active');
+                        } else {
+                            link.classList.remove('active');
+                        }
+                    }
+                }
+            }
+        }
+        // Listen for the scroll event
+        window.addEventListener('scroll', updateActiveLink);
+        // Update the active link when the page loads
+        updateActiveLink();
+
+        // FUNCIONAMENTO DO BOTÃO DE VER MAIS DETALHES DOS GRÁFICOS =======================================================
+        // Get all elements with the class '.expand-toggle'
+        const toggles = document.querySelectorAll('.expand-toggle');
+
+        // Add a click event listener to each toggle
+        toggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                // Get the parent element with the '.description' class
+                const parent = toggle.closest('.description');
+                // Check if the parent exists
+                if (parent) {
+                    // If the parent is already expanded, collapse it
+                    if (parent.classList.contains('expanded')) {
+                        parent.style.maxHeight = null;
+                        parent.classList.remove('expanded');
+
+                        // Scroll the window to the top of the .description element
+                        const rect = parent.getBoundingClientRect();
+                        window.scrollTo({ top: window.scrollY + rect.top, behavior: 'smooth' });
+                    } else {
+                        // Otherwise, expand it to its scroll height
+                        parent.style.maxHeight = `${parent.scrollHeight}px`;
+                        parent.classList.add('expanded');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
